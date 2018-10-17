@@ -35,8 +35,7 @@ import com.example.android.databinding.basicsample.data.SimpleViewModel
 import com.example.android.databinding.basicsample.databinding.PlainActivitySolution2Binding
 
 /**
- * This activity shows shows static data and lets the user increment the
- * number of likes by clicking a button. See [ViewModelActivity] for a better implementation.
+ * Third version of the Activity in the codelab.
  */
 class PlainOldActivitySolution2 : AppCompatActivity() {
 
@@ -52,7 +51,7 @@ class PlainOldActivitySolution2 : AppCompatActivity() {
         binding.name = "Ada"
         binding.lastName = "Lovelace"
 
-        // TODO: Explicitly setting initial values is a bad pattern. We'll fix that.
+        // TODO: Explicitly setting initial values is a bad pattern. We'll fix that later on.
         updateLikes()
     }
 

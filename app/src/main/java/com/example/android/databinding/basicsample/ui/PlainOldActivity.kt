@@ -33,8 +33,7 @@ import com.example.android.databinding.basicsample.data.Popularity
 import com.example.android.databinding.basicsample.data.SimpleViewModel
 
 /**
- * This activity shows shows static data and lets the user increment the
- * number of likes by clicking a button. See [ViewModelActivity] for a better implementation.
+ * Plain old activity with lots of problems to fix.
  */
 class PlainOldActivity : AppCompatActivity() {
 

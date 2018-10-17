@@ -24,10 +24,4 @@
     <string name="name_label">Name</string>
     <string name="profile_avatar_cd">Profile\'s avatar</string>
     <string name="like">Like</string>
-    <string name="observable_fields_activity_text">Observable Fields activity</string>
-    <string name="viewmodel_activity_text">ViewModel activity</string>
-    <string name="observableactivity_activity_label_text">Uses ObservableFields to automatically refresh the UI and showcases common bad practices</string>
-    <string name="plainoldactivity_activity_label_text">An activity that doesn\'t use Data Binding yet.</string>
-    <string name="viewmodel_activity_label_text">Uses a ViewModel to hold data and handle user actions, using better alternatives</string>
-    <string name="see_readme">See README.md for details</string>
 </resources>

@@ -16,36 +16,30 @@
 
 package com.example.android.databinding.basicsample.ui
 
-import android.content.Intent
+import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.android.databinding.basicsample.R
-import com.example.android.databinding.basicsample.databinding.ActivityMainBinding
+import com.example.android.databinding.basicsample.data.SimpleViewModelSolution
+import com.example.android.databinding.basicsample.databinding.SolutionBinding
 
 /**
- * Shows a menu.
+ * Final codelab solution.
  */
-class MainActivity : AppCompatActivity() {
+class SolutionActivity : AppCompatActivity() {
+
+    // Obtain ViewModel from ViewModelProviders
+    private val viewModel by lazy {
+        ViewModelProviders.of(this).get(SimpleViewModelSolution::class.java)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // The layout for this activity is a Data Binding layout so it needs to be inflated using
-        // DataBindingUtil.
-        val binding: ActivityMainBinding = DataBindingUtil.setContentView(
-            this, R.layout.activity_main
-        )
+        val binding: SolutionBinding =
+            DataBindingUtil.setContentView(this, R.layout.solution)
 
-        binding.plainOldActivityButton.setOnClickListener {
-            startActivity(Intent(this, PlainOldActivitySolution::class.java)) // STOPSHIP TODO
-        }
-        // The returned binding has references to all the Views with an ID.
-        binding.observableFieldsActivityButton.setOnClickListener {
-            startActivity(Intent(this, ObservableFieldActivity::class.java))
-        }
-        binding.viewmodelActivityButton.setOnClickListener {
-            startActivity(Intent(this, ViewModelActivity::class.java))
-        }
+        binding.viewmodel = viewModel
     }
 }

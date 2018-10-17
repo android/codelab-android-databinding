@@ -22,13 +22,12 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.data.SimpleViewModelSolution
-import com.example.android.databinding.basicsample.databinding.PlainActivitySolutionBinding
+import com.example.android.databinding.basicsample.databinding.PlainActivitySolution5Binding
 
 /**
- * This activity shows shows static data and lets the user increment the
- * number of likes by clicking a button. See [ViewModelActivity] for a better implementation.
+ * Fifth version of the Activity in the codelab.
  */
-class PlainOldActivitySolution : AppCompatActivity() {
+class PlainOldActivitySolution5 : AppCompatActivity() {
 
     // Obtain ViewModel from ViewModelProviders
     private val viewModel by lazy {
@@ -38,8 +37,8 @@ class PlainOldActivitySolution : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding: PlainActivitySolutionBinding =
-            DataBindingUtil.setContentView(this, R.layout.plain_activity_solution)
+        val binding: PlainActivitySolution5Binding =
+            DataBindingUtil.setContentView(this, R.layout.plain_activity_solution_5)
 
         binding.viewmodel = viewModel
     }

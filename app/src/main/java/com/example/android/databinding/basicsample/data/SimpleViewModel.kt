@@ -46,3 +46,9 @@ class SimpleViewModel : ViewModel() {
             }
         }
 }
+
+enum class Popularity {
+    NORMAL,
+    POPULAR,
+    STAR
+}
