@@ -27,7 +27,7 @@ import com.example.android.databinding.basicsample.data.Popularity.NORMAL
 class SimpleViewModelSolution : ViewModel() {
     val name = "Grace"
     val lastName = "Hopper"
-    var likes = ObservableInt()
+    val likes = ObservableInt()
     val popularity = ObservableField<Popularity>(NORMAL)
 
     /**
