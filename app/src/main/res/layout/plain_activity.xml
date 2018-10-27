@@ -15,7 +15,7 @@
   ~ limitations under the License.
   -->
 
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -134,4 +134,4 @@
         app:layout_constraintStart_toStartOf="@+id/like_button"
         app:layout_constraintTop_toBottomOf="@+id/like_button"
         tools:progressBackgroundTint="@android:color/darker_gray" />
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

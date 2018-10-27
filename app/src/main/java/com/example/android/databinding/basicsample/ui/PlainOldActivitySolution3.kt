@@ -16,15 +16,15 @@
 
 package com.example.android.databinding.basicsample.ui
 
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.res.ColorStateList
-import android.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
-import android.support.v4.widget.ImageViewCompat
-import android.support.v7.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.widget.ImageViewCompat
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView

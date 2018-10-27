@@ -16,9 +16,9 @@
 
 package com.example.android.databinding.basicsample.data
 
-import android.arch.lifecycle.ViewModel
-import android.databinding.ObservableField
-import android.databinding.ObservableInt
+import androidx.databinding.ObservableField
+import androidx.databinding.ObservableInt
+import androidx.lifecycle.ViewModel
 import com.example.android.databinding.basicsample.data.Popularity.NORMAL
 
 /**
