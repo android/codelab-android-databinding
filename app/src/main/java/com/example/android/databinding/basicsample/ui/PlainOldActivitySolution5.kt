@@ -16,10 +16,10 @@
 
 package com.example.android.databinding.basicsample.ui
 
-import android.arch.lifecycle.ViewModelProviders
-import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProviders
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.data.SimpleViewModelSolution
 import com.example.android.databinding.basicsample.databinding.PlainActivitySolution5Binding
@@ -39,6 +39,8 @@ class PlainOldActivitySolution5 : AppCompatActivity() {
 
         val binding: PlainActivitySolution5Binding =
             DataBindingUtil.setContentView(this, R.layout.plain_activity_solution_5)
+
+        binding.lifecycleOwner = this  // use Fragment.viewLifecycleOwner for fragments
 
         binding.viewmodel = viewModel
     }

@@ -16,9 +16,9 @@
 
 package com.example.android.databinding.basicsample.util
 
-import android.databinding.BindingMethod
-import android.databinding.BindingMethods
 import android.widget.ImageView
+import androidx.databinding.BindingMethod
+import androidx.databinding.BindingMethods
 
 /**
  * `app:srcCompat` is an attribute used by the support library to integrate vector drawables. This

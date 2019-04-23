@@ -16,7 +16,7 @@
 
 package com.example.android.databinding.basicsample.data
 
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 
 /**
  * A simple VM for [com.example.android.databinding.basicsample.ui.PlainOldActivity].
