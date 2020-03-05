@@ -34,7 +34,7 @@ import java.util.UUID
  *
  * Tracking bug: https://github.com/android/android-test/issues/317
  */
-class DataBindingIdlingResourcegit c(
+class DataBindingIdlingResource (
     activityScenarioRule: ActivityScenarioRule<out FragmentActivity>
 ) : IdlingResource {
     // list of registered callbacks
