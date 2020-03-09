@@ -1,8 +1,17 @@
 name: CI
 
-on: [push]
+# push will execute any commits that are pushed to any branch
+# on: [push]
+
+# Alternatively, choose a branch
+on:
+  push:
+    branches:
+      - solution
 
 jobs:
+
+  # 1 Build will compile APK, test APK and run tests, lint, etc.
   build:
 
     runs-on: ubuntu-latest
@@ -17,7 +26,10 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-          
+
+    - name: Copy CI gradle.properties
+      run: mkdir -p ~/.gradle ; cp .github/ci-gradle.properties ~/.gradle/gradle.properties
+
     - name: Build and check
       run: ./gradlew assembleDebug assembleDebugAndroidTest app:lintDebug testDebug --scan
 
@@ -54,6 +66,7 @@ jobs:
         path: app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
 
 
+  # Upload APKs to FTL and run instrumented tests
   firebase:
     name: Run UI tests with Firebase Test Lab
     needs: build
@@ -75,7 +88,7 @@ jobs:
       - name: Login to Google Cloud
         uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
-          version: '270.0.0'
+          version: '281.0.0'
           service_account_key: ${{ secrets.FTL_KEY_BASE64 }}
 
       - name: Set current project
