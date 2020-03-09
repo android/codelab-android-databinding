@@ -1,13 +1,7 @@
 name: CI
 
 # push will execute any commits that are pushed to any branch
-# on: [push]
-
-# Alternatively, choose a branch
-on:
-  push:
-    branches:
-      - solution
+on: [push]
 
 jobs:
 
