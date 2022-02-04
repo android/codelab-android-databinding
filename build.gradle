@@ -46,7 +46,7 @@ buildscript {
         runnerExtVersion = '1.1.3'
         rulesVersion = '1.4.0'
         appCompatVersion = '1.4.1'
-        supportLibraryVersion = '1.0.2'
+        supportLibraryVersion = '1.4.0'
         archLifecycleVersion = '2.1.0'
     }
 }
